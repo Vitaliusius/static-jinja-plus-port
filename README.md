@@ -21,3 +21,29 @@ docker run -it -p 8080:8080 vitaliusius/static-jinja-plus:slim-latest bash
 
 # Или запуск версии на Ubuntu
 docker run -it -p 8080:8080 vitaliusius/static-jinja-plus:ubuntu-latest bash
+```
+
+## Локальная сборка и кастомизация версий
+
+Оба файла конфигурации жестко зафиксированы через системные хэши базовых образов (sha256 digest), что гарантирует воспроизводимость сборки и защиту от неожиданных апдейтов дистрибутивов.
+
+При сборке вы можете гибко управлять устанавливаемой версией пакета из PyPI с помощью аргумента 
+`--build-arg STATICJINJA_VERSION`
+### Сборка Python Slim (Минимальный размер):
+
+Сборка последней версии (latest)
+```bash
+docker build -f Dockerfile.py-slim -t static-jinja-plus:slim .
+```
+Сборка конкретной старой версии (например, 1.2.0)
+```bash
+docker build -f Dockerfile.py-slim --build-arg STATICJINJA_VERSION=1.2.0 -t static-jinja-plus:v1.2.0 .
+```
+
+### Сборка на базе Ubuntu 24.04 LTS
+```bash
+docker build -f Dockerfile.ubuntu -t static-jinja-plus:ubuntu .
+```
+
+##Цели проекта
+Код написан в учебных целях — это урок из курса по Python и веб-разработке на сайте Devman.
