@@ -45,5 +45,5 @@ docker build -f Dockerfile.py-slim --build-arg STATICJINJA_VERSION=1.2.0 -t stat
 docker build -f Dockerfile.ubuntu -t static-jinja-plus:ubuntu .
 ```
 
-##Цели проекта
+## Цели проекта
 Код написан в учебных целях — это урок из курса по Python и веб-разработке на сайте Devman.
