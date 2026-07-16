@@ -17,10 +17,10 @@ Docker-порт для утилиты StaticJinjaPlus — продвинутог
 
 ```bash
 # Запуск легкой версии (рекомендуется)
-docker run -it -p 8080:8080 vitaliusius/static-jinja-plus:slim-latest bash
+docker run -it -p 8080:8080 vitaliusius/static-jinja-plus@sha256:e031123e3d85762b141ad1cbc56452ba69c6e722ebf2f042cc0dc86c47c0d8b3
 
 # Или запуск версии на Ubuntu
-docker run -it -p 8080:8080 vitaliusius/static-jinja-plus:ubuntu-latest bash
+docker run -it -p 8080:8080 vitaliusius/static-jinja-plus@sha256:4fbb8e6a8395de5a7550b33509421a2bafbc0aab6c06ba2cef9ebffbc7092d90
 ```
 
 ## Локальная сборка и кастомизация версий
